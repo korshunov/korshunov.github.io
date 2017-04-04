@@ -1,0 +1,15 @@
+[
+	{
+		"id": "index",
+		"title": "Projects"
+	},
+	{
+		"id": "cv",
+		"title": "Experience"
+	},
+	{
+		"id": "contacts",
+		"title": "Contacts",
+		"last": true
+	}
+]

@@ -1,0 +1,17 @@
+{
+  "name": "@fedor/fedor.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node compile.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "html-minifier": "^3.4.2",
+    "marked": "^0.3.6",
+    "mustache": "^2.3.0"
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<style>
+		{{#include}}
+			./css/bootstrap.css
+		{{/include}}
+	</style>
+	<style>
+		{{#include}}
+			./css/styles.css
+		{{/include}}
+	</style>
+	<title>Fedor Korshunov</title>
+</head>
+
+<body>
+	<div id="app">
+		<div id="sidebar">
+			<div id="side-text">
+				<h3>Fedor Korshunov</h3>
+
+				<p>
+					Node.js developer<br>
+					Hong Kong / 香港<br>
+					GitHub: <a href="https://github.com/fedor">@fedor</a><br>
+				</p>
+			</div>
+
+			<div id="side-links">
+				<p>
+					{{#pages}}
+						<a href="{{id}}.html">{{title}}</a>{{^last}} | {{/last}}
+					{{/pages}}
+				</p>
+			</div>
+
+			<div id="side-photo-bottom">
+				<img src="assets/photo.jpg">
+			</div>
+
+			<div id="flat-text-links">
+				<p>
+					<strong>Fedor Korshunov</strong><br>
+					Node.js developer (Hong Kong | 香港)<br>
+					<a href="https://github.com/fedor">GitHub</a> | 
+					{{#pages}}
+						<a href="{{id}}.html">{{title}}</a>{{^last}} | {{/last}}
+					{{/pages}}
+				</p>
+			</div>
+		</div>
+
+		<div id="content">
+			{{#markdown}}
+				{{#include}}
+					pages/{{id}}.md
+				{{/include}}
+			{{/markdown}}
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+a:focus, a:hover {
+  color:#23527c;
+  text-decoration:none;
+}
+
+@media all and (max-width: 800px) {
+	#content, #sidebar {
+		max-width: 480px;
+		min-width: 280px;
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	#side-text, #side-links, #side-photo-bottom {
+		display: none;
+	}
+
+	#app {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+}
+
+@media all and (min-width: 800px) {
+	#side-text, #side-links {
+		text-align: center;
+	}
+
+	#side-photo-bottom img {
+		max-width: 200px;
+	}
+
+	#sidebar {
+		top: 0;
+		width: 200px;
+		position: fixed;
+		margin: 0 0 0 40px;
+	}
+
+	#content {
+		top: 0;
+		width: 480px;
+		margin: 0 0 0 280px;
+	}
+
+	#app {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	#flat-text-links {
+		display: none;
+	}
+}
