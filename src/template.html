@@ -2,6 +2,15 @@
 <html>
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155295044-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-155295044-1');
+	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
@@ -24,8 +33,7 @@
 				<h3>Fedor Korshunov</h3>
 
 				<p>
-					Node.js developer<br>
-					Hong Kong / 香港<br>
+					Hong Kong based software engineering manager<br>
 					GitHub: <a href="https://github.com/fedor">@fedor</a><br>
 				</p>
 			</div>
@@ -38,15 +46,9 @@
 				</p>
 			</div>
 
-			<div id="side-photo-bottom">
-				<img src="assets/photo.jpg">
-			</div>
-
 			<div id="flat-text-links">
 				<p>
-					<strong>Fedor Korshunov</strong><br>
-					Node.js developer (Hong Kong | 香港)<br>
-					<a href="https://github.com/fedor">GitHub</a> | 
+					<strong>Fedor Korshunov</strong> — Hong Kong based software engineering manager<br>
 					{{#pages}}
 						<a href="{{id}}.html">{{title}}</a>{{^last}} | {{/last}}
 					{{/pages}}

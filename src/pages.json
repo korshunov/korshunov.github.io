@@ -1,15 +1,15 @@
 [
 	{
 		"id": "index",
-		"title": "Projects"
+		"title": "About"
 	},
 	{
 		"id": "cv",
-		"title": "Experience"
+		"title": "CV"
 	},
 	{
 		"id": "contacts",
-		"title": "Contacts",
+		"title": "Contact",
 		"last": true
 	}
 ]
