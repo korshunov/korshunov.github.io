@@ -1,10 +1,12 @@
-### CV [[pdf](assets/fedor_korshunov_cv_2020.pdf)]
+# CV 
 
-### Fedor Korshunov
+[[Download PDF](assets/fedor_korshunov_cv_2020.pdf)]
+
+## Fedor Korshunov
 
 _Engineering Manager, Software Engineer Team Leader, and Architect_
 
-#### PROFILE
+### PROFILE
 
 Fedor has 10 years of professional experience in software engineering, including 4 years as a manager. He designs robust, scalable, and cost-effective backend solutions, creates and manages software engineering teams and organisations.
 
@@ -16,7 +18,7 @@ Fedor worked as a software engineer for Intel Corp. and as an engineer's manager
 **Skills:** Agile Development, API Design, Backend Architecture, Software Architecture, Team Leadership, Technical Hiring  
 **Tech skills:** Docker, JavaScript, MongoDB, Node.js, Redis, Vue.js
 
-#### EXPERIENCE
+### EXPERIENCE
 
 **Lalamove (excl. Mainland China), Hong Kong**  
 05/2019 – Present — Engineering Manager, Platform  
@@ -108,6 +110,6 @@ Worked on premium content protection systems
 
 Key technologies: C, crypto APIs (IPPCP), SCons build system, Python, Bash, Batch, Valgrind, Klocwork
 
-#### EDUCATION
+### EDUCATION
 
 National Research Nuclear University MEPhI — Engineer's Degree, 2011

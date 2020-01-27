@@ -13,11 +13,8 @@
 	</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		{{#include}}
-			./css/bootstrap.css
-		{{/include}}
-	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha256-l85OmPOjvil/SOvVt3HnSSjzF1TUMyT9eV0c2BzEGzU=" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
 	<style>
 		{{#include}}
 			./css/styles.css
@@ -27,34 +24,20 @@
 </head>
 
 <body>
-	<div id="app">
-		<div id="sidebar">
-			<div id="side-text">
-				<h3>Fedor Korshunov</h3>
-
-				<p>
-					Hong Kong based software engineering manager<br>
-					GitHub: <a href="https://github.com/fedor">@fedor</a><br>
-				</p>
-			</div>
-
-			<div id="side-links">
-				<p>
-					{{#pages}}
-						<a href="{{id}}.html">{{title}}</a>{{^last}} | {{/last}}
-					{{/pages}}
-				</p>
-			</div>
-
-			<div id="flat-text-links">
-				<p>
-					<strong>Fedor Korshunov</strong> — Hong Kong based software engineering manager<br>
-					{{#pages}}
-						<a href="{{id}}.html">{{title}}</a>{{^last}} | {{/last}}
-					{{/pages}}
-				</p>
-			</div>
+	<div id="header">
+		<div id="title">
+			<h1 id="name">Fedor Korshunov</h1>
+			<p id="subtext">
+				Hong Kong based software engineering manager
+			</p>
 		</div>
+
+		<p id="navlinks">
+		{{#pages}}
+			<a href="{{id}}.html">{{title}}</a>
+		{{/pages}}
+		</p>	
+	</div>
 
 		<div id="content">
 			{{#markdown}}
@@ -63,7 +46,6 @@
 				{{/include}}
 			{{/markdown}}
 		</div>
-	</div>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-### Get in touch!
+# Get in touch!
 
 Feel free to send me a message or follow me.
 
