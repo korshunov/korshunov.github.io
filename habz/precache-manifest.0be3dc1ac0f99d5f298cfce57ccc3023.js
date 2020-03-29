@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fa88954a02f3f48ada5c1298039fbe1",
+    "revision": "72585f6452b25bd1ebf166cacc477d0e",
     "url": "/habz/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/habz/static/css/8.1594e46e.chunk.css"
   },
   {
-    "revision": "d5b1ac0e411b419d764a",
+    "revision": "7afb6d67cc50c0c25c71",
     "url": "/habz/static/css/main.aa3c21a5.chunk.css"
   },
   {
@@ -404,8 +404,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/habz/static/js/94.9012f5ae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d5b1ac0e411b419d764a",
-    "url": "/habz/static/js/main.37e598af.chunk.js"
+    "revision": "7afb6d67cc50c0c25c71",
+    "url": "/habz/static/js/main.1189f54d.chunk.js"
   },
   {
     "revision": "9f340cbfb5a0ebb4db2b",
