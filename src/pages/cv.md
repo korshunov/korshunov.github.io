@@ -1,76 +1,78 @@
 # CV 
 
-[[Download PDF](assets/fedor_korshunov_cv_2020.pdf)]
+[[Download PDF](assets/fedor_korshunov_cv_2021.pdf)]
 
 ## Fedor Korshunov
 
-_Engineering Manager, Software Engineer Team Leader, and Architect_
+_Software Architect, Engineer, and Manager_
 
 ### PROFILE
 
-Fedor has 10 years of professional experience in software engineering, including 4 years as a manager. He designs robust, scalable, and cost-effective backend solutions, creates and manages software engineering teams and organisations.
+Fedor has 12 years of professional experience in software engineering, including 6 years as a manager. He designs robust, scalable, and cost-effective backend solutions, creates and manages software engineering teams.
 
-Fedor worked as a software engineer for Intel Corp. and as an engineer's manager for leading Hong Kong startups, Aftership and Lalamove.
+Fedor worked for Intel Corp. and leading Hong Kong startups, Aftership and Lalamove.
 
 **Details:** mail@fedor.cc, +852 6403 8877, Hong Kong  
-**Nationality:** Russian  
+**Nationality:** Russia  
 **Languages:** English (fluent), Russian (native)  
-**Skills:** Agile Development, API Design, Backend Architecture, Software Architecture, Team Leadership, Technical Hiring  
+**Skills:** Agile Development, API Design, Backend Architecture, Software Architecture, Software Design, Team Leadership, Technical Hiring  
 **Tech skills:** Docker, JavaScript, MongoDB, Node.js, Redis, Vue.js
 
 ### EXPERIENCE
 
-**Lalamove (excl. Mainland China), Hong Kong**  
-05/2019 – Present — Engineering Manager, Platform  
+**Lalamove, Hong Kong**  
+04/2020 – 02/2021 — Solution Lead, Lalamove+  
+05/2019 – 03/2020 — Engineering Manager, Platform  
 01/2017 – 04/2019 — Software Team Leader
 
-Lalamove is one of the major on-demand delivery platforms in SEA and a recent Hong Kong "unicorn". Joined as a team leader, later transitioned to engineering manager. Established and improved various parts of the software development process, hired and on-boarded software teams, act as an architect and manage Platform organisation.
+Lalamove is one of the major on-demand delivery platforms in SEA and a recent Hong Kong "unicorn". Joined as a team leader, later transitioned to engineering manager. Established and improved various parts of the software development process, hired and on-boarded software teams, act as an architect and manage Platform organisation. Later lead a team and launched a new greenfield project.
 
 *Key achievements — process*
-* Setup engineering standards 
+* Setup engineering standards
   - test automation, coding guidelines, API design standards
-* Introduced cross-functional feature teams 
+* Introduced cross-functional feature teams
   - reduced cross-teams dependencies
-* Setup regular and one-off engineering training sessions 
+* Setup regular and one-off engineering training sessions
   - test automation, engineering practices, internal on-boarding
-* Setup quality control measures — review and approval process for API changes 
-  - merge request checklist, deployment checklist 
-  - canary deployments 
-  - feature flags to detach changes deployment from changes release 
+* Setup quality control measures
+  - review and approval process for API changes
+  - merge request and deployment checklists
+  - canary deployments
+  - feature flags
   - CI/CD pipelines
-* Defined engineering hiring process 
-  - source channels of engineering candidates 
-  - technical challenges 
+* Defined engineering hiring process
+  - source channels of candidates
+  - technical challenges
   - interview questions
 
 *Key achievements — product*
-* Resolved stability issues of а key legacy system used by a major customer (MongoDB queries refactoring and architecture revamp)
-* Introduced and integrated configuration panel and configuration API to remove tech team as a dependency for operational requests (e.g. price changes, service type adjustments, etc.)
-* Fully eliminate the need for tech team involvement for product expansion to new cities in existing markets
-* Radically reduced the need for platform tech team involvement for product expansion to new countries, from ~3 weeks for half of the tech team to 1 engineer for less than 1 week
+* Fixed stability problems of а key legacy system: MongoDB queries refactoring and architecture revamp
+* Proposed, launched, and integrated configuration panel for operational requests: price changes, service type adjustments, etc.
+* Removed dependency on tech team for product expansion to new cities in existing markets. Reduced dependency on platform tech team for expansion to new countries, from ~3 weeks and half of the tech team to 1 engineer and less than 1 week
+* Lead tech team and launched Lalamove+, enterprise solution for high-profile clients
 
 *Responsibilities*
-* Build and run a full-stack team
+* Build and run full-stack teams
 * Manage and grow Platform department, ~30-40 engineers
 * Manage tech debt backlog
-* Review architecture and API proposals, correct and improve
+* Review, correct, and improve architecture and API proposals
 * Act as a hiring manager for backend software engineers
 
 **Aftership, Hong Kong**  
 09/2014 – 11/2016 — Senior Software Engineer and Team Lead
 
-Aftership is a world-leading shipment tracking platform. Joined as a senior engineer, later transitioned to team leader. Build the Aftership plugin system foundation and key parts of [postmen.com](postmen.com) (shipping label generation API).
+Aftership is a world-leading shipment tracking platform. Joined as a senior engineer, later transitioned to team leader. Build the Aftership plugin system foundation and key parts of [postmen.com](postmen.com), shipping label generation platform.
 
 *Key achievements*
-* Upgraded and unified Aftership eCommerce integration platform aftership.com/apps
-* Designed architecture of postmen.com to provide easy extendibility of the solution with new shipment services with minimum tech team involvement
+* Upgraded and unified Aftership eCommerce integration platform [aftership.com/apps](aftership.com/apps)
+* Designed architecture of [postmen.com](postmen.com) to provide easy integration of new delivery services with minimum tech team involvement
 
 *Responsibilities*
 * Manage software developers team
 * Design and implement backend systems architecture and interfaces
 * Guarantee quality and feature completeness
-* Provide technical guidance for junior engineers
-* Technical assessment of candidates for engineering roles
+* Guide junior engineers
+* Technical assessment of engineering candidates
 
 Key technologies: Node.js, Beanstalkd, Docker, AWS API, Python (fabric), PDF and barcodes generation, web scraping (crawling)
 
