@@ -1,8 +1,8 @@
 # Hello,
 
-My name is Fedor. I'm a software engineering manager, team lead, architect, and (occasionally) programmer. I'm currently based in [Hong Kong](https://en.wikipedia.org/wiki/Hong_Kong). I was born and raised in Russia but has left it for good in 2014.
+I am Fedor. A software programmer, architect, manager, and team lead. I did system programming with C, and backend development with Python and Node.js. I managed teams from 2 to 40 engineers. I was born and raised in Russia. Since 2014 I'm based in [Hong Kong](https://en.wikipedia.org/wiki/Hong_Kong).
 
-My favorite stack: Node.JS, Koa, MongoDB, Redis, Vue.js, HTMX, jQuery, and vanilla HTML/CSS/JavaScript. I'm not strong at frontend, mostly focused on backend/APIs.
+My favorite stack is: Node.js, Koa, MongoDB, Redis, Vue.js, HTMX, jQuery, and vanilla HTML/CSS/JavaScript. I'm not religious about this tech stack. I'm not strong at frontend, mostly focused on backend/APIs.
 
 I love quality, simplicity, and good food ;-)
 
