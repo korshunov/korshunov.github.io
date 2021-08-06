@@ -1,6 +1,4 @@
-# About me
-
-Hello,
+# Hello,
 
 My name is Fedor. I'm a software engineering manager, team lead, architect, and (occasionally) programmer. I'm currently based in [Hong Kong](https://en.wikipedia.org/wiki/Hong_Kong). I was born and raised in Russia but has left it for good in 2014.
 

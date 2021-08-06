@@ -1,12 +1,6 @@
-# CV 
+# CV [[pdf](assets/fedor_korshunov_cv_2021.pdf)]
 
-[[Download PDF](assets/fedor_korshunov_cv_2021.pdf)]
-
-## Fedor Korshunov
-
-_Software Architect, Engineer, and Manager_
-
-### PROFILE
+## PROFILE
 
 Fedor has 12 years of professional experience in software engineering, including 6 years as a manager. He designs robust, scalable, and cost-effective backend solutions, creates and manages software engineering teams.
 
@@ -18,7 +12,7 @@ Fedor worked for Intel Corp. and leading Hong Kong startups, Aftership and Lalam
 **Skills:** Agile Development, API Design, Backend Architecture, Software Architecture, Software Design, Team Leadership, Technical Hiring  
 **Tech skills:** Docker, JavaScript, MongoDB, Node.js, Redis, Vue.js
 
-### EXPERIENCE
+## EXPERIENCE
 
 **Lalamove, Hong Kong**  
 04/2020 – 02/2021 — Solution Lead, Lalamove+  
@@ -61,11 +55,11 @@ Lalamove is one of the major on-demand delivery platforms in SEA and a recent Ho
 **Aftership, Hong Kong**  
 09/2014 – 11/2016 — Senior Software Engineer and Team Lead
 
-Aftership is a world-leading shipment tracking platform. Joined as a senior engineer, later transitioned to team leader. Build the Aftership plugin system foundation and key parts of [postmen.com](postmen.com), shipping label generation platform.
+Aftership is a world-leading shipment tracking platform. Joined as a senior engineer, later transitioned to team leader. Build the Aftership plugin system foundation and key parts of [postmen.com](https://postmen.com), shipping label generation platform.
 
 *Key achievements*
-* Upgraded and unified Aftership eCommerce integration platform [aftership.com/apps](aftership.com/apps)
-* Designed architecture of [postmen.com](postmen.com) to provide easy integration of new delivery services with minimum tech team involvement
+* Upgraded and unified Aftership eCommerce integration platform [aftership.com/apps](https://aftership.com/apps)
+* Designed architecture of [postmen.com](https://postmen.com) to provide easy integration of new delivery services with minimum tech team involvement
 
 *Responsibilities*
 * Manage software developers team
@@ -112,6 +106,6 @@ Worked on premium content protection systems
 
 Key technologies: C, crypto APIs (IPPCP), SCons build system, Python, Bash, Batch, Valgrind, Klocwork
 
-### EDUCATION
+## EDUCATION
 
 National Research Nuclear University MEPhI — Engineer's Degree, 2011
