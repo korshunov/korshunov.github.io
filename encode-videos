@@ -1,0 +1,17 @@
+#/bin/bash
+ORIGINAL_VIDS=($(find assets -iname *.original.mov -print))
+
+for ORIGINAL_VID in "${ORIGINAL_VIDS[@]}"; do
+	echo "$ORIGINAL_VID"
+	PREFIX=${ORIGINAL_VID%".original.mov"}
+
+	if [[ ! -f "$PREFIX.mp4" ]]; then
+	    echo -e "\tencoding $PREFIX.mp4"
+	    ffmpeg -i $ORIGINAL_VID -vcodec libx264 $PREFIX.mp4
+	fi
+
+	if [[ ! -f "$PREFIX.webm" ]]; then
+	    echo -e "\tencoding $PREFIX.webm"
+	    ffmpeg -i $ORIGINAL_VID -vcodec libvpx-vp9 $PREFIX.webm
+	fi
+done
