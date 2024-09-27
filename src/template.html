@@ -6,9 +6,9 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
-		<link href="/style.css" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
 		<noscript>
-			<link href="/style.noscript.css" rel="stylesheet">
+			<link href="style.noscript.css" rel="stylesheet">
 		</noscript>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -94,7 +94,7 @@
 		flex flex-col
 		justify-between
 
-		leading-relaxed
+		leading-7
 		text-lg"
 	>
 		<div class="
@@ -106,23 +106,22 @@
 				id="sidebar"
 				class="
 					mt-8 mx-8 
-					  md:mr-0
+					md:mr-0
 					md:min-w-max"
 			>
 				<div class="sticky top-8">
 					<div class="flex justify-between">
-						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="/">
+						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="index.html">
 							Fedor Korshunov
 						</a>
 						<label for="nav-toggle" class="md:hidden"><b>Navigation</b></label>
 					</div>
 					<input type="checkbox" id="nav-toggle" class="hidden">
-					<nav class="md:block">
+					<nav class="md:block uppercase mt-8 leading-9 text-center md:text-left">
 						<ul>
-							<li><a class="{{{nav_link_classes.index}}}"  href="/">About</a></li>
-							<li><a class="{{{nav_link_classes.resume}}}" href="/resume">Work</a></li>
-							<li><a class="{{{nav_link_classes.posts}}}"  href="/posts">Posts</a></li>
-							<li><a class="{{{nav_link_classes.index}}}"  href="/">Contact</a></li>
+							<li><a class="{{{nav_link_classes.index}}}" href="index.html">About</a></li>
+							<li><a class="{{{nav_link_classes.now}}}"   href="now.html">Now</a></li>
+							<li><a class="{{{nav_link_classes.work}}}"  href="work.html">Work</a></li>
 							<li><a
 								id="colorSchemeToggle"
 								href="javascript:void(0);"
@@ -139,13 +138,13 @@
 					flex flex-col
 					my-8 mx-auto
 					px-8
-					w-full max-w-screen-lg"	
+					w-full max-w-screen-md"	
 			>
 				{{{content}}}
 			</div>
 		</div>
 
-		<footers
+		<footer
 			class="
 				dark:bg-neutral-900 dark:text-neutral-500
 				     bg-neutral-200      text-neutral-500
@@ -164,7 +163,7 @@
 					<div>©2023 Fedor Korshunov</div>
 				</div>
 			</div>
-		</div>
+		</footer>
 	</body>
 	<script type="text/javascript">
 		setColorScheme(localStorage.colorScheme || getPreferredColorScheme())

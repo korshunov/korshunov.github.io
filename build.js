@@ -15,7 +15,7 @@ const postTemplate = readTextFile(`${rootDir}/posts/template.html`)
 const posts = JSON.parse(readTextFile(`${rootDir}/posts/pages.json`))
 
 // Build root-level pages
-;['index', 'posts', 'resume'].forEach(
+;['index', 'now', 'work'].forEach(
 	name => {
 		fs.writeFileSync(
 			`${__dirname}/build/${name}.html`,
