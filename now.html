@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="style.css" rel="stylesheet">
+		<noscript>
+			<link href="style.noscript.css" rel="stylesheet">
+		</noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155295044-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-155295044-1');
+		</script>
+		<script type="text/javascript">
+			const htmlClassList = document.getElementsByTagName("html")[0].classList
+			function getPreferredColorScheme() {
+				return (
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? 'dark'
+					: (window.matchMedia("(prefers-color-scheme: light)")
+						? 'light'
+						: undefined)
+				)
+			}
+
+			function setColorScheme(scheme) {
+				const preferedScheme = getPreferredColorScheme()
+				const htmlDefinedScheme = htmlClassList.contains("dark") ? 'dark' : (htmlClassList.contains("light") ? 'light' : undefined)
+				const activeScheme = htmlDefinedScheme || getPreferredColorScheme() || 'light'
+				const inverseScheme = scheme === 'light'
+					? 'dark'
+					: (scheme === 'dark'
+						? 'light'
+						: htmlDefinedScheme || getPreferredColorScheme() || 'light')
+
+				const colorSchemeToggleElement = document.getElementById("colorSchemeToggle")
+				const mobileColorSchemeToggleElement = document.getElementById("mobileColorSchemeToggle")
+				if (inverseScheme === 'light') {
+					// Set 'dark' scheme
+					if ('dark' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'dark'
+					}
+
+					htmlClassList.remove('light')
+					htmlClassList.add('dark')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Light mode' // '[ Light OFF ]'
+					}
+				} else {
+					// Set 'light' scheme
+					if ('light' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'light'
+					}
+
+					htmlClassList.remove('dark')
+					htmlClassList.add('light')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Dark mode' // '[ Light ON ]'
+					}
+				}
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'dark') }
+			})
+
+			window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'light') }
+			})
+
+			// on page load
+			setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+		</script>
+		<title>Fedor Korshunov</title>
+	</head>
+	<body class="
+		dark:bg-neutral-800 dark:text-neutral-200
+		     bg-neutral-50       text-neutral-700
+		
+		min-h-screen
+		
+		flex flex-col
+		justify-between
+
+		leading-7
+		text-lg"
+	>
+		<div class="
+			grow
+			flex flex-col
+			  md:flex-row"
+		>
+			<div
+				id="sidebar"
+				class="
+					mt-8 mx-8 
+					md:mr-0
+					md:min-w-max"
+			>
+				<div class="sticky top-8">
+					<div class="flex justify-between">
+						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="index.html">
+							Fedor Korshunov
+						</a>
+						<label for="nav-toggle" class="md:hidden"><b>Navigation</b></label>
+					</div>
+					<input type="checkbox" id="nav-toggle" class="hidden">
+					<nav class="md:block uppercase mt-8 leading-9 text-center md:text-left">
+						<ul>
+							<li><a class="" href="index.html">About</a></li>
+							<li><a class="underline"   href="now.html">Now</a></li>
+							<li><a class=""  href="work.html">Work</a></li>
+							<li><a
+								id="colorSchemeToggle"
+								href="javascript:void(0);"
+								onclick="setColorScheme()"
+							></a></li>
+						</ul>	
+					</nav>
+				</div>
+			</div>
+
+			<div
+				id="content"
+				class="
+					flex flex-col
+					my-8 mx-auto
+					px-8
+					w-full max-w-screen-md"	
+			>
+				<h1 class="font-serif text-4xl mb-4">Now</h1>
+<ul class="list-disc list-inside mb-4">
+	<li>
+		<b>Learn Japanese 🌸</b>
+		<ul class="ml-5 list-disc list-inside">
+			<li>Learn vocabulary with <a href="https://www.wanikani.com/">WaniKani</a></li>
+			<li>Learn grammar with YouTube and podcasts</li>
+		</ul>
+	</li>
+	<li>
+		<b>Study <a href="https://www.nand2tetris.org/">Nand to Tetris</a> course</b>
+		<ul class="ml-5 list-disc list-inside">
+			<li><i>Build a Modern Computer from First Principles</i></li>
+			<li>PART 1: Hardware (COMPLETED) ✅</li>
+			<li>PART 2: Software (WORK IN PROGRESS) ✍️</li>
+		</ul>
+	</li>
+</ul>
+<hr/>
+<p class="my-4"><b>Past</b></p>
+
+<p class="mb-0">July 2024</p>
+<ul class="ml-5 list-disc list-inside">
+	<li>Finished driving course and got driving license 🪪</li>
+</ul>
+
+
+			</div>
+		</div>
+
+		<footer
+			class="
+				dark:bg-neutral-900 dark:text-neutral-500
+				     bg-neutral-200      text-neutral-500
+				
+				text-base
+				py-8
+			"
+		>
+			<div class="flex flex-col max-w-screen-md mx-auto items-center space-y-0.5">
+				<div class="flex space-x-4">
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://github.com/fedor">GitHub</a>
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://www.linkedin.com/in/fedorhk/">LinkedIn</a>
+					<span>mail@fedor.cc</span>
+				</div>
+				<div class="flex space-x-4">
+					<div>©2023 Fedor Korshunov</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+	</script>
+</html>
