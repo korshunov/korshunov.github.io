@@ -646,11 +646,6 @@ nav a {
   margin-right: auto;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -660,12 +655,16 @@ nav a {
   margin-bottom: 0px;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
+.ml-0 {
+  margin-left: 0px;
 }
 
 .ml-6 {
@@ -806,6 +805,10 @@ nav a {
 
 .pl-4 {
   padding-left: 1rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
