@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @layer components {
-	h1                   { @apply mb-6 font-sans text-4xl text-center; }
-	h2                   { @apply mb-2 font-sans text-2xl; }
-	p                    { @apply mb-8; }
+	h1                   { @apply mb-6 font-serif text-4xl text-center; }
+	h2                   { @apply mb-4 font-sans text-2xl; }
+	p                    { @apply mb-4 text-lg; }
 	a                    { @apply hover:underline dark:text-blue-400 text-blue-700; }
-	img, video           { @apply w-full max-w-[600px] rounded-lg mx-auto mb-10; }
+	img, video           { @apply w-full max-w-[600px] rounded-lg mx-auto mb-4; }
 	nav a                { @apply dark:text-neutral-200 text-neutral-700; }
-	.media-sub-section   { @apply text-base text-center dark:text-neutral-500 text-neutral-500 -mt-9; }
-	.media-sub-section a { @apply                       dark:text-neutral-500 text-neutral-500; }
+	.media-sub-section   { @apply text-sm text-center dark:text-neutral-500 text-neutral-500 -mt-4; }
+	.media-sub-section a { @apply                     dark:text-neutral-500 text-neutral-500; }
 	.contents-list       { @apply list-disc list-inside mb-10 }
 }
 

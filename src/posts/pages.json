@@ -1,7 +1,17 @@
 [
 	{
-		"created": "November 18, 2023",
-		"name":    "japan-2023-07",
-		"title":   "Trip to Japan in July 2023"
+		"created": "September 30, 2024",
+		"name":    "2024-09-30-driving-in-taiwan",
+		"title":   "Driving in Taiwan"
+	},
+	{
+		"created": "May 12, 2024",
+		"name":    "2024-05-12-nand2tetris-part-1",
+		"title":   "Nand2Tetris Part One"
+	},
+	{
+		"created": "May 11, 2024",
+		"name":    "2024-05-11-xiaomi-typing",
+		"title":   "Xiaomi: English-only Typing"
 	}
 ]

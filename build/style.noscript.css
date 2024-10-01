@@ -537,20 +537,22 @@ video {
 h1 {
   margin-bottom: 1.5rem;
   text-align: center;
-  font-family: Graphik, sans-serif;
+  font-family: IBM Plex Serif, serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
 
 h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   font-family: Graphik, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
 }
 
 p {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 a {
@@ -572,7 +574,7 @@ a:hover {
 img, video {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   width: 100%;
   max-width: 600px;
   border-radius: 0.5rem;
@@ -591,10 +593,10 @@ nav a {
 }
 
 .media-sub-section {
-  margin-top: -2.25rem;
+  margin-top: -1rem;
   text-align: center;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   --tw-text-opacity: 1;
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
@@ -622,6 +624,10 @@ nav a {
   margin-bottom: 2.5rem;
   list-style-position: inside;
   list-style-type: disc;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .static {
@@ -671,6 +677,10 @@ nav a {
   margin-left: 1.5rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -717,6 +727,10 @@ nav a {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -822,11 +836,6 @@ nav a {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .text-base {
@@ -951,11 +960,6 @@ input:checked + nav {
 }
 
 @media (min-width: 768px) {
-  .md\:mx-0 {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
-
   .md\:mr-0 {
     margin-right: 0px;
   }

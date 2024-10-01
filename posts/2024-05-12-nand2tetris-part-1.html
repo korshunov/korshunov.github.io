@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="/style.css" rel="stylesheet">
+		<noscript>
+			<link href="/style.noscript.css" rel="stylesheet">
+		</noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155295044-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-155295044-1');
+		</script>
+		<script type="text/javascript">
+			const htmlClassList = document.getElementsByTagName("html")[0].classList
+			function getPreferredColorScheme() {
+				return (
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? 'dark'
+					: (window.matchMedia("(prefers-color-scheme: light)")
+						? 'light'
+						: undefined)
+				)
+			}
+
+			function setColorScheme(scheme) {
+				const preferedScheme = getPreferredColorScheme()
+				const htmlDefinedScheme = htmlClassList.contains("dark") ? 'dark' : (htmlClassList.contains("light") ? 'light' : undefined)
+				const activeScheme = htmlDefinedScheme || getPreferredColorScheme() || 'light'
+				const inverseScheme = scheme === 'light'
+					? 'dark'
+					: (scheme === 'dark'
+						? 'light'
+						: htmlDefinedScheme || getPreferredColorScheme() || 'light')
+
+				const colorSchemeToggleElement = document.getElementById("colorSchemeToggle")
+				const mobileColorSchemeToggleElement = document.getElementById("mobileColorSchemeToggle")
+				if (inverseScheme === 'light') {
+					// Set 'dark' scheme
+					if ('dark' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'dark'
+					}
+
+					htmlClassList.remove('light')
+					htmlClassList.add('dark')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Light mode' // '[ Light OFF ]'
+					}
+				} else {
+					// Set 'light' scheme
+					if ('light' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'light'
+					}
+
+					htmlClassList.remove('dark')
+					htmlClassList.add('light')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Dark mode' // '[ Light ON ]'
+					}
+				}
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'dark') }
+			})
+
+			window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'light') }
+			})
+
+			// on page load
+			setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+		</script>
+		<title>Fedor Korshunov</title>
+	</head>
+	<body class="
+		dark:bg-neutral-800 dark:text-neutral-200
+		     bg-neutral-50       text-neutral-700
+		
+		min-h-screen
+		
+		flex flex-col
+		justify-between
+
+		leading-7
+		text-lg"
+	>
+		<div class="
+			grow
+			flex flex-col
+			  md:flex-row"
+		>
+			<div
+				id="sidebar"
+				class="
+					mt-8 mx-8 
+					md:mr-0
+					md:min-w-max"
+			>
+				<div class="sticky top-8">
+					<div class="flex justify-between">
+						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="/">
+							Fedor Korshunov
+						</a>
+						<label for="nav-toggle" class="md:hidden"><b>Navigation</b></label>
+					</div>
+					<input type="checkbox" id="nav-toggle" class="hidden">
+					<nav class="md:block uppercase mt-8 leading-9 text-center md:text-left">
+						<ul>
+							<li><a class=""  href="/">About</a></li>
+							<li><a class=""    href="/now">Now</a></li>
+							<li><a class=""   href="/work">Work</a></li>
+							<li><a class="underline"  href="/posts">Posts</a></li>
+							<li><a
+								id="colorSchemeToggle"
+								href="javascript:void(0);"
+								onclick="setColorScheme()"
+							></a></li>
+						</ul>	
+					</nav>
+				</div>
+			</div>
+
+			<div
+				id="content"
+				class="
+					flex flex-col
+					my-8 mx-auto
+					px-8
+					w-full max-w-screen-md"	
+			>
+				<div class="pb-[60vh]">
+	<h1 class="mb-2">Nand2Tetris Part One</h1>
+	<p class="text-base text-center">May 12, 2024</p>
+	<p>
+	I've just finished the first part of the nand2tetris course,
+	the goal of the first part is to explain how computer hardware
+	works.
+</p>
+
+<p>
+	To achieve that, students implement a simple computer
+	hardware design starting with NAND gates — a chip that
+	takes a pair of 0s and 1s and applies "not and" logical
+	operation, e.g. "1 NAND 1 = 0". Basic NAND gates are used
+	to build other chips like AND, OR, NOT, etc. Next they are
+	used to build an Arithmetic Logic Unit (ALU, a computer's
+	calculator), a Central Processing Unit (CPU, a chip that
+	executes computer programs), and memory chips to hold data
+	and programs — registers and Random Access Memory (RAM).
+	Finally, students put these pieces together to build a
+	computer. Every chip input and output is defined by the
+	task, while students have to figure out their internals.
+</p>
+
+<p>
+	The interfaces of the basic logic gates and memory chips
+	are self-evident. However the interface of the ALU and the
+	CPU are not. To explain their design, the course introduces
+	an assembly language and its mapping to a binary form. That
+	means the course does not exclusively focus on the hardware
+	part but also on the software. However only on the concepts
+	that are tightly coupled with the hardware implementation.
+</p>
+
+<p>
+	Essentially, designing a computer is an exercise in building
+	layers of hardware abstractions on top of each other. The
+	course uses Hardware Description Language (HDL) which is a
+	simplified version of the real-life VHDL and Verilog.
+	Emulators are provided to test HDL, assembly, and binary code.
+</p>
+
+<p>
+	The course is split in 6 projects (12 for both parts 1 and 2).
+	For each project I watched the video first, then read a matching
+	book chapter before doing a unit's task.
+</p>
+
+<p>
+	In the last project of the first part students need to
+	implement an assembly to binary translator. For this, they
+	may use any programming language they know, and the
+	translator is designed to run on a student's host machine,
+	not on a computer designed in the course (otherwise it must
+	be done with 0s and 1s!). Personally, it was a great excuse
+	to do some C programming after a long break.
+</p>
+
+<p>
+	The requirement to know a programming language makes the
+	course not accessible for those who haven't touched
+	programming yet. Plus provided instructions assumes
+	familiarity with the basics of Object Oriented Design, very
+	common in academia, but completely not necessary to
+	implement the requested logic. However, for those who don't
+	know how to write programs or aren't interested in taking
+	the second part of the course (focused on software) the
+	completion of the last unit is not necessary. Thus, the
+	first part of nand2tetris could be even studied by
+	school students.
+</p>
+
+<p>
+	I highly recommend Nand2Tetris part one for Computer Science
+	students, hobbyists and professional programmers. The course
+	will definitely help you to be a better programmer. If you
+	are struggling with pointers in C, or don't get the GNU/Intel
+	Assembly language, completing this course would help you to
+	bridge the gap and finally understand them.
+</p>
+
+<p>
+	Even non-programmers who are interested in how computers work should give it a try.
+</p>
+
+<p>
+	Get materials here: <a href="https://www.nand2tetris.org/">nand2tetris.org</a>.
+</p>
+
+	<div class="flex justify-center space-x-8">
+		<a class="" href="/posts">
+			<span class="text-2xl">&#x1f519;</span> All Posts
+		</a>
+		<a class="" href="#">
+			<span class="text-2xl">&#x1f51d;</span> Top
+		</a>
+	</div>
+</div>
+<p class="text-base text-center dark:text-neutral-500 text-neutral-500 mb-0">
+	The bottom of the page is blank so readers can maintain a
+	consistent eyeline
+	(<a
+		class="dark:text-neutral-500 text-neutral-500"
+		href="https://cpu.land/">credit</a>)
+</p>
+
+			</div>
+		</div>
+
+		<footer
+			class="
+				dark:bg-neutral-900 dark:text-neutral-500
+				     bg-neutral-200      text-neutral-500
+				
+				text-base
+				py-8
+			"
+		>
+			<div class="flex flex-col max-w-screen-md mx-auto items-center space-y-0.5">
+				<div class="flex space-x-4">
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://github.com/fedor">GitHub</a>
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://www.linkedin.com/in/fedorhk/">LinkedIn</a>
+					<span>mail@fedor.cc</span>
+				</div>
+				<div class="flex space-x-4 pt-4 text-sm">
+					<div>©2024 Fedor Korshunov</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+	</script>
+</html>

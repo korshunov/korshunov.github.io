@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="/style.css" rel="stylesheet">
+		<noscript>
+			<link href="/style.noscript.css" rel="stylesheet">
+		</noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155295044-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-155295044-1');
+		</script>
+		<script type="text/javascript">
+			const htmlClassList = document.getElementsByTagName("html")[0].classList
+			function getPreferredColorScheme() {
+				return (
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? 'dark'
+					: (window.matchMedia("(prefers-color-scheme: light)")
+						? 'light'
+						: undefined)
+				)
+			}
+
+			function setColorScheme(scheme) {
+				const preferedScheme = getPreferredColorScheme()
+				const htmlDefinedScheme = htmlClassList.contains("dark") ? 'dark' : (htmlClassList.contains("light") ? 'light' : undefined)
+				const activeScheme = htmlDefinedScheme || getPreferredColorScheme() || 'light'
+				const inverseScheme = scheme === 'light'
+					? 'dark'
+					: (scheme === 'dark'
+						? 'light'
+						: htmlDefinedScheme || getPreferredColorScheme() || 'light')
+
+				const colorSchemeToggleElement = document.getElementById("colorSchemeToggle")
+				const mobileColorSchemeToggleElement = document.getElementById("mobileColorSchemeToggle")
+				if (inverseScheme === 'light') {
+					// Set 'dark' scheme
+					if ('dark' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'dark'
+					}
+
+					htmlClassList.remove('light')
+					htmlClassList.add('dark')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Light mode' // '[ Light OFF ]'
+					}
+				} else {
+					// Set 'light' scheme
+					if ('light' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'light'
+					}
+
+					htmlClassList.remove('dark')
+					htmlClassList.add('light')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Dark mode' // '[ Light ON ]'
+					}
+				}
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'dark') }
+			})
+
+			window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'light') }
+			})
+
+			// on page load
+			setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+		</script>
+		<title>Fedor Korshunov</title>
+	</head>
+	<body class="
+		dark:bg-neutral-800 dark:text-neutral-200
+		     bg-neutral-50       text-neutral-700
+		
+		min-h-screen
+		
+		flex flex-col
+		justify-between
+
+		leading-7
+		text-lg"
+	>
+		<div class="
+			grow
+			flex flex-col
+			  md:flex-row"
+		>
+			<div
+				id="sidebar"
+				class="
+					mt-8 mx-8 
+					md:mr-0
+					md:min-w-max"
+			>
+				<div class="sticky top-8">
+					<div class="flex justify-between">
+						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="/">
+							Fedor Korshunov
+						</a>
+						<label for="nav-toggle" class="md:hidden"><b>Navigation</b></label>
+					</div>
+					<input type="checkbox" id="nav-toggle" class="hidden">
+					<nav class="md:block uppercase mt-8 leading-9 text-center md:text-left">
+						<ul>
+							<li><a class=""  href="/">About</a></li>
+							<li><a class=""    href="/now">Now</a></li>
+							<li><a class=""   href="/work">Work</a></li>
+							<li><a class="underline"  href="/posts">Posts</a></li>
+							<li><a
+								id="colorSchemeToggle"
+								href="javascript:void(0);"
+								onclick="setColorScheme()"
+							></a></li>
+						</ul>	
+					</nav>
+				</div>
+			</div>
+
+			<div
+				id="content"
+				class="
+					flex flex-col
+					my-8 mx-auto
+					px-8
+					w-full max-w-screen-md"	
+			>
+				<div class="pb-[60vh]">
+	<h1 class="mb-2">Xiaomi: English-only Typing</h1>
+	<p class="text-base text-center">May 11, 2024</p>
+	<p>
+	I've recently bought a cheap tablet from Xiaomi — <a href="https://www.mi.com/global/product/redmi-pad-se">Redmi Pad SE</a>. My main goal is using it for reading books/PDFs and watching videos. The device indeed works pretty well for content consumption. I do, however, have other use cases in mind: SSH to remote machines and writing.
+</p>
+
+<p>
+	Doing any typing on a tablet's touch screen beyond occasional google search or a text message would be painful or slow, so I connected an external bluetooth keyboard.
+</p>
+
+<p>
+	And just like the tablet, the keyboard worked fine until I switched to Russian. Instead of Cyrillic, Latin letters appeared as if no layout switch happened.
+</p>
+
+<p>
+	Android keyboard layouts are configured in a GBoard, a virtual keyboard app. The keyword here is "virtual". Apparently physical keyboard layouts are managed separately in a different app. I can access that physical keyboard configuration app to set available layouts. I did just that and discovered that only the US keyboard was selected.
+</p>
+
+<p>
+	It may seem like the rest is easy, just add a Russian
+	layout to the list for the physical keyboard and it's done.
+	However, it's not that easy.
+</p>
+
+<p>
+	First issue is available
+	layouts. There are many types of Russian layouts,
+	personally I use "Phonetic", since I don't have Cyrillic
+	letters printed on my key caps and rely on similar Latin
+	characters to type. The configuration only shows "Standard"
+	and "Mac". Both are nearly identical and not phonetic.
+</p>
+
+<p>
+	Second issue is a confusing Android interface. Once the physical
+	keyboard is connected, the virtual keyboard hides, but is
+	not fully removed from the screen. Instead a small floating
+	window shows the currently selected language (of the
+	virtual keyboard) and a button to bring the virtual
+	keyboard back. Pressing Ctrl+Space on a physical keyboard
+	switches language on a virtual keyboard only and the change
+	is shown on a floating window. This is the original point
+	of friction, Russian is "selected" but typing still happens
+	with the English physical layout.
+</p>
+
+<p>
+	I can't help but want to ask
+	questions:<br/>
+	1. Why is the virtual keyboard layout shown when
+	it's hidden and another input method is used?<br/>
+	2. Why is the
+	physical keyboard layout not shown?<br/>
+	3. Why a
+	physical keyboard has a combination to switch the virtual
+	keyboard layout? Does it mean that somebody would not be
+	able or willing to press the button to change the virtual
+	keyboard layout on the screen, but will/can actually type
+	with it?<br/>
+	4. Why are physical layouts present in PC and Mac not
+	available?<br/>
+	5. Why are physical keyboard layouts not added
+	automatically with virtual or at least offered to be added?...
+</p>
+
+<p>
+	Anyway, to switch a physical keyboard layout press Win+Space. A brief notification will show the newly selected layout and disappear. This combination is not displayed anywhere and if no extra physical layout was added nothing will show (so intuitive!).
+</p>
+
+<p>
+	But wait, there is more. Prior to attaching the physical keyboard I also had a Chinese keyboard in GBoard, so: English, Russian, Chinese (in that order). When I was switching the virtual keyboard by Ctrl+Space, the Russian layout kept working as the English layout, once I was switching again to the Chinese virtual layout, surely I could type Chinese with pinyin with the physical keyboard. So probably, somebody in Xiaomi worked on unification and integration of virtual/physical layouts but stopped short. Well I guess if the integration of just the Chinese is enough at home (it's not enough), it's good enough for the rest of the world (it's not good).
+</p>
+
+<p>
+	One last note before conclusions. I typed this post on my new cheap Xiaomi Redmi Pad SE tablet with a physical keyboard using the Xiaomi Notes app. If I reach the end of the text and press the Right Arrow key, the focus moves away from the typing window, so I need to tap the text window to get back to typing. This, plus Chinese-only integration shows QA issues.
+</p>
+
+<p>
+	<b>Conclusions</b><br/>
+	1. UI/UX fragmentation is bad, although not fully avoidable.
+	One team is doing the GBoard, another integration with
+	physical keyboards, third (Xiaomi) fits pieces in their
+	custom UI. Apple understands it, Google not really.<br/>
+	2. A global product (with multi-locales) can't be designed and tested as a single-locale product.<br/>
+	3. If you are considering not an absolutely typical use-case for your tablet, consider Apple's iPad.
+</p>
+
+	<div class="flex justify-center space-x-8">
+		<a class="" href="/posts">
+			<span class="text-2xl">&#x1f519;</span> All Posts
+		</a>
+		<a class="" href="#">
+			<span class="text-2xl">&#x1f51d;</span> Top
+		</a>
+	</div>
+</div>
+<p class="text-base text-center dark:text-neutral-500 text-neutral-500 mb-0">
+	The bottom of the page is blank so readers can maintain a
+	consistent eyeline
+	(<a
+		class="dark:text-neutral-500 text-neutral-500"
+		href="https://cpu.land/">credit</a>)
+</p>
+
+			</div>
+		</div>
+
+		<footer
+			class="
+				dark:bg-neutral-900 dark:text-neutral-500
+				     bg-neutral-200      text-neutral-500
+				
+				text-base
+				py-8
+			"
+		>
+			<div class="flex flex-col max-w-screen-md mx-auto items-center space-y-0.5">
+				<div class="flex space-x-4">
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://github.com/fedor">GitHub</a>
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://www.linkedin.com/in/fedorhk/">LinkedIn</a>
+					<span>mail@fedor.cc</span>
+				</div>
+				<div class="flex space-x-4 pt-4 text-sm">
+					<div>©2024 Fedor Korshunov</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+	</script>
+</html>

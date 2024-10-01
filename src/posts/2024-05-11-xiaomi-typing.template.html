@@ -1,0 +1,84 @@
+<p>
+	I've recently bought a cheap tablet from Xiaomi — <a href="https://www.mi.com/global/product/redmi-pad-se">Redmi Pad SE</a>. My main goal is using it for reading books/PDFs and watching videos. The device indeed works pretty well for content consumption. I do, however, have other use cases in mind: SSH to remote machines and writing.
+</p>
+
+<p>
+	Doing any typing on a tablet's touch screen beyond occasional google search or a text message would be painful or slow, so I connected an external bluetooth keyboard.
+</p>
+
+<p>
+	And just like the tablet, the keyboard worked fine until I switched to Russian. Instead of Cyrillic, Latin letters appeared as if no layout switch happened.
+</p>
+
+<p>
+	Android keyboard layouts are configured in a GBoard, a virtual keyboard app. The keyword here is "virtual". Apparently physical keyboard layouts are managed separately in a different app. I can access that physical keyboard configuration app to set available layouts. I did just that and discovered that only the US keyboard was selected.
+</p>
+
+<p>
+	It may seem like the rest is easy, just add a Russian
+	layout to the list for the physical keyboard and it's done.
+	However, it's not that easy.
+</p>
+
+<p>
+	First issue is available
+	layouts. There are many types of Russian layouts,
+	personally I use "Phonetic", since I don't have Cyrillic
+	letters printed on my key caps and rely on similar Latin
+	characters to type. The configuration only shows "Standard"
+	and "Mac". Both are nearly identical and not phonetic.
+</p>
+
+<p>
+	Second issue is a confusing Android interface. Once the physical
+	keyboard is connected, the virtual keyboard hides, but is
+	not fully removed from the screen. Instead a small floating
+	window shows the currently selected language (of the
+	virtual keyboard) and a button to bring the virtual
+	keyboard back. Pressing Ctrl+Space on a physical keyboard
+	switches language on a virtual keyboard only and the change
+	is shown on a floating window. This is the original point
+	of friction, Russian is "selected" but typing still happens
+	with the English physical layout.
+</p>
+
+<p>
+	I can't help but want to ask
+	questions:<br/>
+	1. Why is the virtual keyboard layout shown when
+	it's hidden and another input method is used?<br/>
+	2. Why is the
+	physical keyboard layout not shown?<br/>
+	3. Why a
+	physical keyboard has a combination to switch the virtual
+	keyboard layout? Does it mean that somebody would not be
+	able or willing to press the button to change the virtual
+	keyboard layout on the screen, but will/can actually type
+	with it?<br/>
+	4. Why are physical layouts present in PC and Mac not
+	available?<br/>
+	5. Why are physical keyboard layouts not added
+	automatically with virtual or at least offered to be added?...
+</p>
+
+<p>
+	Anyway, to switch a physical keyboard layout press Win+Space. A brief notification will show the newly selected layout and disappear. This combination is not displayed anywhere and if no extra physical layout was added nothing will show (so intuitive!).
+</p>
+
+<p>
+	But wait, there is more. Prior to attaching the physical keyboard I also had a Chinese keyboard in GBoard, so: English, Russian, Chinese (in that order). When I was switching the virtual keyboard by Ctrl+Space, the Russian layout kept working as the English layout, once I was switching again to the Chinese virtual layout, surely I could type Chinese with pinyin with the physical keyboard. So probably, somebody in Xiaomi worked on unification and integration of virtual/physical layouts but stopped short. Well I guess if the integration of just the Chinese is enough at home (it's not enough), it's good enough for the rest of the world (it's not good).
+</p>
+
+<p>
+	One last note before conclusions. I typed this post on my new cheap Xiaomi Redmi Pad SE tablet with a physical keyboard using the Xiaomi Notes app. If I reach the end of the text and press the Right Arrow key, the focus moves away from the typing window, so I need to tap the text window to get back to typing. This, plus Chinese-only integration shows QA issues.
+</p>
+
+<p>
+	<b>Conclusions</b><br/>
+	1. UI/UX fragmentation is bad, although not fully avoidable.
+	One team is doing the GBoard, another integration with
+	physical keyboards, third (Xiaomi) fits pieces in their
+	custom UI. Apple understands it, Google not really.<br/>
+	2. A global product (with multi-locales) can't be designed and tested as a single-locale product.<br/>
+	3. If you are considering not an absolutely typical use-case for your tablet, consider Apple's iPad.
+</p>

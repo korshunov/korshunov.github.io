@@ -1,0 +1,85 @@
+<p>
+	I've just finished the first part of the nand2tetris course,
+	the goal of the first part is to explain how computer hardware
+	works.
+</p>
+
+<p>
+	To achieve that, students implement a simple computer
+	hardware design starting with NAND gates — a chip that
+	takes a pair of 0s and 1s and applies "not and" logical
+	operation, e.g. "1 NAND 1 = 0". Basic NAND gates are used
+	to build other chips like AND, OR, NOT, etc. Next they are
+	used to build an Arithmetic Logic Unit (ALU, a computer's
+	calculator), a Central Processing Unit (CPU, a chip that
+	executes computer programs), and memory chips to hold data
+	and programs — registers and Random Access Memory (RAM).
+	Finally, students put these pieces together to build a
+	computer. Every chip input and output is defined by the
+	task, while students have to figure out their internals.
+</p>
+
+<p>
+	The interfaces of the basic logic gates and memory chips
+	are self-evident. However the interface of the ALU and the
+	CPU are not. To explain their design, the course introduces
+	an assembly language and its mapping to a binary form. That
+	means the course does not exclusively focus on the hardware
+	part but also on the software. However only on the concepts
+	that are tightly coupled with the hardware implementation.
+</p>
+
+<p>
+	Essentially, designing a computer is an exercise in building
+	layers of hardware abstractions on top of each other. The
+	course uses Hardware Description Language (HDL) which is a
+	simplified version of the real-life VHDL and Verilog.
+	Emulators are provided to test HDL, assembly, and binary code.
+</p>
+
+<p>
+	The course is split in 6 projects (12 for both parts 1 and 2).
+	For each project I watched the video first, then read a matching
+	book chapter before doing a unit's task.
+</p>
+
+<p>
+	In the last project of the first part students need to
+	implement an assembly to binary translator. For this, they
+	may use any programming language they know, and the
+	translator is designed to run on a student's host machine,
+	not on a computer designed in the course (otherwise it must
+	be done with 0s and 1s!). Personally, it was a great excuse
+	to do some C programming after a long break.
+</p>
+
+<p>
+	The requirement to know a programming language makes the
+	course not accessible for those who haven't touched
+	programming yet. Plus provided instructions assumes
+	familiarity with the basics of Object Oriented Design, very
+	common in academia, but completely not necessary to
+	implement the requested logic. However, for those who don't
+	know how to write programs or aren't interested in taking
+	the second part of the course (focused on software) the
+	completion of the last unit is not necessary. Thus, the
+	first part of nand2tetris could be even studied by
+	school students.
+</p>
+
+<p>
+	I highly recommend Nand2Tetris part one for Computer Science
+	students, hobbyists and professional programmers. The course
+	will definitely help you to be a better programmer. If you
+	are struggling with pointers in C, or don't get the GNU/Intel
+	Assembly language, completing this course would help you to
+	bridge the gap and finally understand them.
+</p>
+
+<p>
+	Even non-programmers who are interested in how computers work should give it a try.
+</p>
+
+<p>
+	Get materials here: <a href="https://www.nand2tetris.org/">nand2tetris.org</a>.
+</p>

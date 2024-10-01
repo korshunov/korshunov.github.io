@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&family=IBM+Plex+Sans:ital@0;1&family=IBM+Plex+Serif:ital@0;1&display=swap" rel="stylesheet">
+		<link href="/style.css" rel="stylesheet">
+		<noscript>
+			<link href="/style.noscript.css" rel="stylesheet">
+		</noscript>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-155295044-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-155295044-1');
+		</script>
+		<script type="text/javascript">
+			const htmlClassList = document.getElementsByTagName("html")[0].classList
+			function getPreferredColorScheme() {
+				return (
+					window.matchMedia("(prefers-color-scheme: dark)").matches
+					? 'dark'
+					: (window.matchMedia("(prefers-color-scheme: light)")
+						? 'light'
+						: undefined)
+				)
+			}
+
+			function setColorScheme(scheme) {
+				const preferedScheme = getPreferredColorScheme()
+				const htmlDefinedScheme = htmlClassList.contains("dark") ? 'dark' : (htmlClassList.contains("light") ? 'light' : undefined)
+				const activeScheme = htmlDefinedScheme || getPreferredColorScheme() || 'light'
+				const inverseScheme = scheme === 'light'
+					? 'dark'
+					: (scheme === 'dark'
+						? 'light'
+						: htmlDefinedScheme || getPreferredColorScheme() || 'light')
+
+				const colorSchemeToggleElement = document.getElementById("colorSchemeToggle")
+				const mobileColorSchemeToggleElement = document.getElementById("mobileColorSchemeToggle")
+				if (inverseScheme === 'light') {
+					// Set 'dark' scheme
+					if ('dark' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'dark'
+					}
+
+					htmlClassList.remove('light')
+					htmlClassList.add('dark')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Light mode' // '[ Light OFF ]'
+					}
+				} else {
+					// Set 'light' scheme
+					if ('light' === preferedScheme) {
+						localStorage.removeItem('colorScheme')
+					} else {
+						localStorage.colorScheme = 'light'
+					}
+
+					htmlClassList.remove('dark')
+					htmlClassList.add('light')
+					if (colorSchemeToggleElement) {
+						colorSchemeToggleElement.innerHTML = 'Dark mode' // '[ Light ON ]'
+					}
+				}
+			}
+
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'dark') }
+			})
+
+			window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function (obj) {
+				if (obj.matches) { setColorScheme(localStorage.colorScheme || 'light') }
+			})
+
+			// on page load
+			setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+		</script>
+		<title>Fedor Korshunov</title>
+	</head>
+	<body class="
+		dark:bg-neutral-800 dark:text-neutral-200
+		     bg-neutral-50       text-neutral-700
+		
+		min-h-screen
+		
+		flex flex-col
+		justify-between
+
+		leading-7
+		text-lg"
+	>
+		<div class="
+			grow
+			flex flex-col
+			  md:flex-row"
+		>
+			<div
+				id="sidebar"
+				class="
+					mt-8 mx-8 
+					md:mr-0
+					md:min-w-max"
+			>
+				<div class="sticky top-8">
+					<div class="flex justify-between">
+						<a class="font-bold dark:text-neutral-200 text-neutral-700" href="/">
+							Fedor Korshunov
+						</a>
+						<label for="nav-toggle" class="md:hidden"><b>Navigation</b></label>
+					</div>
+					<input type="checkbox" id="nav-toggle" class="hidden">
+					<nav class="md:block uppercase mt-8 leading-9 text-center md:text-left">
+						<ul>
+							<li><a class=""  href="/">About</a></li>
+							<li><a class=""    href="/now">Now</a></li>
+							<li><a class=""   href="/work">Work</a></li>
+							<li><a class="underline"  href="/posts">Posts</a></li>
+							<li><a
+								id="colorSchemeToggle"
+								href="javascript:void(0);"
+								onclick="setColorScheme()"
+							></a></li>
+						</ul>	
+					</nav>
+				</div>
+			</div>
+
+			<div
+				id="content"
+				class="
+					flex flex-col
+					my-8 mx-auto
+					px-8
+					w-full max-w-screen-md"	
+			>
+				<div class="pb-[60vh]">
+	<h1 class="mb-2">Driving in Taiwan</h1>
+	<p class="text-base text-center">September 30, 2024</p>
+	<p>
+	I recently got my first ever driving license and
+	yesterday was driving for the first time on my own.
+	We rented a car and went to the
+	<a href="https://www.nmmba.gov.tw/En/">National Museum of
+	Marine Biology and Aquarium</a> in the south.
+</p>
+
+<p>	
+	The trip there was okay, it was during the day, roads were
+	not busy and Google Maps navigator worked as expected.
+</p>
+
+<p>
+	The trip back was not so pleasant.
+</p>
+
+<p>
+	1. It took place during the dawn and after the sunset, I
+	suddenly discovered my side windows were tinted. That's
+	really dumb. It greatly affects visibility, changing lanes
+	and getting on highways was not fun. I understand that the
+	sun is a concern, but come on, there are ways to cover
+	windows whenever the car is parked in the open, and most
+	of the UV is stopped by the regular glass anyway. Seems
+	fully or nearly-fully transparent anti-UV coating is also
+	an option. Once I made my observation, I discovered that
+	most cars in Taiwan have a visible tint. Beware, they are
+	also half-blind at night.
+</p>
+
+<p>
+	2. Navigation with Google Maps works... until it's not. As
+	I was on a highway, Google started losing GPS signal for a
+	brief moment triggering re-routing. After re-routing the
+	navigator app assumed I was <b>under</b> the highway and
+	navigated me back on it. It happened a few times. One time I
+	got confused and exited the highway one exit earlier. With
+	that I had to make my way through the city. Google did an
+	OK job but I wish it gave me more detailed instructions.
+	For example: the main road and a slow lane separated by a
+	safety island, I need to turn right and must do it from the
+	slow lane. "Take the left lane to turn right" is
+	technically a correct instruction, but "turn right to the
+	slow lane to turn right in 200 meters" would be much better.
+</p>
+
+<p>
+	Overall it was okay for the first time. Navigation issues
+	are definitely minor and are just a matter of experience.
+	But I'd probably avoid driving in Taiwan unless I buy my
+	own car and get rid of a dumb tint.
+</p>
+
+<p>
+	PS we saw cute Beluga whales! They were
+	<a href="https://en.wikipedia.org/wiki/Hvaldimir">definitely
+	not Russian spies</a>.
+</p>
+
+<video controls muted>
+	<source src="/assets/blog/2024-09-30-driving-in-taiwan/beluga.original.mov" >
+	Embedded video is not supported. You can <a href="/assets/blog/2024-09-30-driving-in-taiwan/beluga.original.mov">download</a> it instead.
+</video>
+<p class="media-sub-section">
+	Download:
+	<!-- <a href="/assets/blog/2024-09-30-driving-in-taiwan/amanohashidate.mp4">mp4</a> -->
+	<a href="/assets/blog/2024-09-30-driving-in-taiwan/beluga.original.mov">mov</a> 
+	<!-- <a href="/assets/blog/2024-09-30-driving-in-taiwan/amanohashidate.webm">webm</a> -->
+</p>
+
+<img src="/assets/blog/2024-09-30-driving-in-taiwan/tank.jpg">
+
+	<div class="flex justify-center space-x-8">
+		<a class="" href="/posts">
+			<span class="text-2xl">&#x1f519;</span> All Posts
+		</a>
+		<a class="" href="#">
+			<span class="text-2xl">&#x1f51d;</span> Top
+		</a>
+	</div>
+</div>
+<p class="text-base text-center dark:text-neutral-500 text-neutral-500 mb-0">
+	The bottom of the page is blank so readers can maintain a
+	consistent eyeline
+	(<a
+		class="dark:text-neutral-500 text-neutral-500"
+		href="https://cpu.land/">credit</a>)
+</p>
+
+			</div>
+		</div>
+
+		<footer
+			class="
+				dark:bg-neutral-900 dark:text-neutral-500
+				     bg-neutral-200      text-neutral-500
+				
+				text-base
+				py-8
+			"
+		>
+			<div class="flex flex-col max-w-screen-md mx-auto items-center space-y-0.5">
+				<div class="flex space-x-4">
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://github.com/fedor">GitHub</a>
+					<a class="dark:text-neutral-500 text-neutral-500" href="https://www.linkedin.com/in/fedorhk/">LinkedIn</a>
+					<span>mail@fedor.cc</span>
+				</div>
+				<div class="flex space-x-4 pt-4 text-sm">
+					<div>©2024 Fedor Korshunov</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		setColorScheme(localStorage.colorScheme || getPreferredColorScheme())
+	</script>
+</html>
