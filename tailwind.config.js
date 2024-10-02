@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./build/**/*.html"],
-	darkMode: 'class',
+	content: [`./${process.argv[6] || "build"}/**/*.html`],
+	...(process.argv[7] === "noscript" ? {} : { darkMode: 'class' }),
 	theme: {
 		fontFamily: {
-			sans: ['IBM Plex Sans', 'sans-serif'],
+			sans:  ['IBM Plex Sans',  'sans-serif'],
 			serif: ['IBM Plex Serif', 'serif'],
-			mono: ['IBM Plex Mono', 'monospace'],
+			mono:  ['IBM Plex Mono',  'monospace'],
 		},
 		extend: {},
 	},

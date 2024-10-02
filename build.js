@@ -13,18 +13,19 @@ const rootDir = path.join(__dirname, '/src')
 const rootTemplate = readTextFile(`${rootDir}/template.html`)
 const postTemplate = readTextFile(`${rootDir}/posts/template.html`)
 const posts = JSON.parse(readTextFile(`${rootDir}/posts/pages.json`))
+const build_dir = process.argv[2] || 'build'
 
 // Build root-level pages
 ;['index', 'now', 'work', 'posts'].forEach(
 	name => {
 		fs.writeFileSync(
-			`${__dirname}/build/${name}.html`,
+			`${__dirname}/${build_dir}/${name}.html`,
 			Mustache.render(
 				rootTemplate,
 				{
 					nav_link_classes: { [name]: 'underline' },
 					content: Mustache.render(
-						readTextFile(`${rootDir}/${name}.template.html`),
+						readTextFile(`${rootDir}/${name}.html`),
 						{ posts },
 					),
 				}
@@ -36,7 +37,7 @@ const posts = JSON.parse(readTextFile(`${rootDir}/posts/pages.json`))
 // Build post pages
 posts.forEach(
 	page => fs.writeFileSync(
-		`${__dirname}/build/posts/${page.name}.html`,
+		`${__dirname}/${build_dir}/posts/${page.name}.html`,
 		Mustache.render(
 			rootTemplate,
 			{
@@ -46,7 +47,7 @@ posts.forEach(
 					{
 						...page,
 						content: Mustache.render(
-							readTextFile(`${rootDir}/posts/${page.name}.template.html`),
+							readTextFile(`${rootDir}/posts/${page.name}.html`),
 							{ ...page },
 						),
 					}

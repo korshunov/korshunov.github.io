@@ -44,7 +44,7 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: Graphik, sans-serif;
+  font-family: IBM Plex Sans, sans-serif;
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
@@ -129,7 +129,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: IBM Plex Mono, monospace;
   /* 1 */
   font-size: 1em;
   /* 2 */
@@ -544,7 +544,7 @@ h1 {
 
 h2 {
   margin-bottom: 1rem;
-  font-family: Graphik, sans-serif;
+  font-family: IBM Plex Sans, sans-serif;
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -564,11 +564,9 @@ a:hover {
   text-decoration-line: underline;
 }
 
-@media (prefers-color-scheme: dark) {
-  a {
-    --tw-text-opacity: 1;
-    color: rgb(96 165 250 / var(--tw-text-opacity));
-  }
+:is(.dark a) {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
 }
 
 img, video {
@@ -585,11 +583,9 @@ nav a {
   color: rgb(64 64 64 / var(--tw-text-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  nav a {
-    --tw-text-opacity: 1;
-    color: rgb(229 229 229 / var(--tw-text-opacity));
-  }
+:is(.dark nav a) {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
 }
 
 .media-sub-section {
@@ -601,11 +597,9 @@ nav a {
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  .media-sub-section {
-    --tw-text-opacity: 1;
-    color: rgb(115 115 115 / var(--tw-text-opacity));
-  }
+:is(.dark .media-sub-section) {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .media-sub-section a {
@@ -613,17 +607,9 @@ nav a {
   color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
-@media (prefers-color-scheme: dark) {
-  .media-sub-section a {
-    --tw-text-opacity: 1;
-    color: rgb(115 115 115 / var(--tw-text-opacity));
-  }
-}
-
-.contents-list {
-  margin-bottom: 2.5rem;
-  list-style-position: inside;
-  list-style-type: disc;
+:is(.dark .media-sub-section a) {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 .visible {
@@ -937,26 +923,24 @@ input:checked + nav {
   text-decoration-style: solid;
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-neutral-800 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(38 38 38 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:bg-neutral-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(38 38 38 / var(--tw-bg-opacity));
+}
 
-  .dark\:bg-neutral-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(23 23 23 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:bg-neutral-900) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
 
-  .dark\:text-neutral-200 {
-    --tw-text-opacity: 1;
-    color: rgb(229 229 229 / var(--tw-text-opacity));
-  }
+:is(.dark .dark\:text-neutral-200) {
+  --tw-text-opacity: 1;
+  color: rgb(229 229 229 / var(--tw-text-opacity));
+}
 
-  .dark\:text-neutral-500 {
-    --tw-text-opacity: 1;
-    color: rgb(115 115 115 / var(--tw-text-opacity));
-  }
+:is(.dark .dark\:text-neutral-500) {
+  --tw-text-opacity: 1;
+  color: rgb(115 115 115 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {

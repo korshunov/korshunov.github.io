@@ -1,10 +1,11 @@
 const liveServer = require("live-server")
 const path = require('path')
+const build_dir = process.argv[2] || "build"
 const params = {
-	root:  "build", // Set root directory that's being served. Defaults to cwd.
-	watch: "build",
+	root:  build_dir, // Set root directory that's being served. Defaults to cwd.
+	watch: build_dir,
 	// open:  false, // When false, it won't load your browser by default.
-	mount: [['/assets', './assets']],
+	mount: [['/assets', `./${build_dir}/assets`]],
 	logLevel: 2,
 	middleware: [
 		function(req, res, next) {
